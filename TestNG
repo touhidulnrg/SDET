@@ -1,0 +1,137 @@
+What is TestNG?
+TestNG is a testing framework designed to simplify a broad range of testing needs, from unit testing to integration testing. TestNG is a testing framework inspired from JUnit and NUnit. It has more functionalities compared to JUnit and NUnit and it makes more powerful and easier to use.
+TestNG Annotations:
+@Test: Marks a class or a method as a part of the test.
+@BeforeMethod: executed before every @test annotated method.
+@AfterMethod: 
+@BeforeClass: executed before first @Test method execution. It runs only once per class.
+@AfterClass: 
+@BeforeTest: executed before first @Test annotated method.
+@AfterTest: 
+@BeforeSuite: run only once before all tests in the suite have run
+@AfterSuite: 
+@BeforeGroups: This annotated method will run before the first test run of that specific group.
+@AfterGroups: group completes its execution.
+Some other TestNG Annotations, we need to discuss here are mentioned below:
+@Parameters: This annotation is used to pass parameters to test methods.
+@DataProvider: always return Object[][] 
+@Factory: used by TestNG as Test classes. The method must return Object[ ].
+@Listeners: used with test class. It helps in writing logs and results.
+Sample testng.xml file:
+<suite name="softwaretestingmaterial">
+  <test name="testngTest">
+   <classes>
+     <class name="softwareTestingMaterial.STMTestNGClass" />
+   </classes>
+ </test>
+</suite>
+
+1)	How To Ignore/Skipping TestNG Test?
+@Test(enabled = false).  another way of skipping a test method is by using throw new SkipException() exception.
+
+2)	TestNG Dependencies:
+@Test(dependsOnMethods = {"testCase2"})
+
+3)	How to Group Test?
+@Test (groups = { "smokeTest", "functionalTest" })
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" > 
+   <suite name="softwaretestingmaterial">
+     <test name="testngTest"> 
+        <groups>
+            <run>
+                <include name="smokeTest" />
+            </run>
+         </groups> 
+      <classes>
+           <class name="softwareTestingMaterial.TestCase1" />
+          <class name="softwareTestingMaterial.TestCase2" />
+     </classes>
+ </test>
+</suite>
+4)	How to run multiple times testng test? 
+@Test(invocationCount = 100)
+5)	Always run test
+@BeforeClass( alwaysRun = true )
+
+6)	How to Parameterized test with tenstng xml?
+public class ParameterizedTest { 
+ @Test
+ @Parameters("browser")
+ public void parameterizedTest(String browser){
+ 	if(browser.equals("firefox")){
+ 	   System.out.println("Open Firefox Driver");
+      }else if(browser.equals("chrome")){
+ 	   System.out.println("Open Chrome Driver");
+ } } }
+
+let’s see the complete testng.xml file
+<suite name="softwaretestingmaterial">
+ <test name="testngTest">
+ <parameter name="browser" value="firefox"/>
+ <classes>
+    <class name="softwareTestingMaterial.ParameterizedTest" />
+ </classes>
+ </test> 
+</suite>
+
+7)	TestNG DataProviders
+==================================
+public class DataProviderClass{
+  @Test (dataProvider = 'getData')
+  public void loginTest(String Uid, String Pwd){
+    System.out.println("user" + Uid);
+    System.out.println("Pass" + Pwd);
+  }
+  
+  @DataProvider(name='getData')
+  public Object[][] getData(){
+  //Object [][] data = new Object [row][col];
+  Object [][] data = new Object [2][2];
+  
+    data[0][0] = "firstUid";
+    data[0][1] = "firstPwd";
+    data[1][0] = "secUid";
+    data[1][1] = "secPwd";
+    return data;
+   }
+  }
+  ================================
+  8)	Parallel Test Execution In TestNG:
+To run both the browsers in parallel, use the below code in your testng.xml file.
+<suite name="softwaretestingmaterial" parallel="methods" thread-count="2">
+ <test name="testngTest">
+  <classes>
+    <class name="softwareTestingMaterial.ParallelTest" />
+ </classes>
+ </test> 
+</suite>
+   ------------------------------
+  public class ParallelTests {
+  
+  @Test
+  public void getFirefox(){
+    WebDriver driver = new FirefoxDriver();
+    driver.get("http://www.XYZ.com");
+    driver.close();
+   }
+   
+   @Test
+  public void getChrome
+    WebDriver driver = new ChromeDriver();
+    driver.get("http://www.XYZ.com");
+    driver.close();
+   }
+   ===============================
+  9)	How to use in Assertions:
+Assert.assertEqual(String actual,String expected, String message) 
+Assert.assertTrue(condition, message)
+Assert.assertFalse(condition, message)
+Soft Assert – Soft Assert collects errors during @Test. Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement.
+Note:  If you forget to call assertAll() at the end of your test, the test will pass even if any assert objects threw exceptions as shown in the above example. So don’t forget to add assertAll()
+ 
+   
+  
+   
+
+
