@@ -1,0 +1,209 @@
+Advanced Selenium Questions:
+1)	What is FluentWait in selenium?
+// Waiting 30 seconds for an element to be present on the page, checking
+   // for its presence once every 5 seconds.
+   Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+       .withTimeout(30, SECONDS)
+       .pollingEvery(5, SECONDS)
+       .ignoring(NoSuchElementException.class);
+   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+     public WebElement apply(WebDriver driver) {
+       return driver.findElement(By.id("foo"));
+     }
+   });
+// throwing an “ElementNotVisibleException”
+
+2)	What is ImplicitWait vs ExplicitWait ?
+ImplicitWait: WebDriver to wait for a certain amount of time before it throws timeout exception. Applied to all the elements in the script. Wait for pulling the DOM.
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+ExplicitWait: WebDriverWait is applied on a certain element with defined expected condition and time.
+Explicit wait will overwrite the implicit wait where ever explicit wait is applied. So, Explicit Wait gets first preference then Implicit Wait.
+WebDriverWait wait = new WebDriverWait(driver, 20);
+WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(“”)));
+Ecpected cConditions can be used in:
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+3)	How would you scroll down the page using JavaScript?
+((JavascriptExecutor) driver).executeScript("window.scrollBy(0,750)");
+
+4)	How to scroll down to a particular element? 
+We can use the function scrollIntoView(). Example:
+((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();" , element);
+
+5)	Is the FirefoxDriver a Class or an Interface?
+FirefoxDriver is a Java class, and it implements the WebDriver interface.
+6)	How will you use Selenium to upload a file?
+element = driver.find_element_by_id("fileUpload")
+element.send_keys("C:\myfile.txt")
+7)	What is the difference between getwindowhandles() and getwindowhandle()?
+getwindowhandles(): used to get the address of all open browsers, and its return type is Set<String>
+getwindowhandle(): used to get the address of current browser where the control is, and return type string.
+Set<String> handle= driver.getWindowHandles();
+   for (String handle : driver.getWindowHandles()) {
+ 
+    driver.switchTo().window(handle);}
+
+8)	How do I handle a frame in WebDriver?
+iframe by ID
+driver.switchTo().frame(“ID of the frame“);
+Locating iframe using tagName
+driver.switchTo().frame(driver.findElements(By.tagName(“iframe”).get(0));
+frame(index)
+driver.switchTo().frame(0);
+frame(“Name of the Frame”)
+driver.switchTo().frame(“name of the frame”);
+Select Parent Window
+driver.switchTo().defaultContent();
+
+9)	How to input text in the text box without calling the sendKeys()?
+JavascriptExecutor JS = (JavascriptExecutor)webdriver;
+JS.executeScript("document.getElementById('User').value='user007");
+JS.executeScript("document.getElementById('Pass').value='passwd");
+
+10)	How to delete cookies in Selenium?
+driver.manage().deleteAllCookies();
+
+11)	How to get an attribute value using Selenium WebDriver?
+<input name="nameSelenium" value="Selenium">Software Testing</input>
+String attVal = driver.findElement(By.name("nameSelenium")).getAttribute("classname");
+
+12)	How to submit a form using Selenium WebDriver?
+driver.findElement(By.id("form_1")).submit();
+or
+driver.findElement(By.xpath("xpath")).sendKeys(Keys.ENTER);
+13)	How to fetch the current page URL in Selenium?
+driver.getCurrentUrl();
+
+14)	Difference between driver.findElement() vs driver.findElements()?
+findElement(): returns a single WebElement.
+findElements(): List<WebElement> ele = driver.findElements(By.id(“id”)); //returns list of WebElements.
+
+15)	How to find whether an element is displayed on the web page?
+These web elements can be buttons, drop boxes, checkboxes, radio buttons, labels etc.
+boolean elePresent = driver.findElement(By.xpath("xpath")).isDisplayed();
+boolean eleSelected= driver.findElement(By.xpath("xpath")).isSelected();
+boolean eleEnabled= driver.findElement(By.xpath("xpath")).isEnabled();
+
+16)	How to select a value in a dropdown?
+WebElement myDropdownElement = driver.findElement(By.name("dropdown"));
+Select dropdown = new Select(myDropdownElement);
+dropdown.selectByVisibleText(“Text”);
+dropdown.selectByIndex(Index);
+dropdown.selectByValue(“Value”);
+
+17)	How to mouse hover or double click on a web element using WebDriver?
+WebElement ele = driver.findElement(By.xpath("xpath"));
+//Create object 'action' of an Actions class
+Actions action = new Actions(driver);
+//Mouseover on an element
+action.moveToElement(ele).perform();
+//double click
+action.doubleClick(webElement);
+//right click
+action.contextClick(ele).perform();
+
+18)	How element do Drag and Drop in Selenium?
+
+WebElement From=driver.findElement(By.xpath("//*[@id='credit2']/a"));
+WebElement To=driver.findElement(By.xpath("//*[@id='bank']/li"));
+Actions act = new Actions(driver);
+//Dragged and dropped.		
+act.dragAndDrop(From, To).build().perform();
+
+19)	To get a handle to the open alert:
+Alert alert = driver.switchTo().alert();
+alert.accept();
+alert.dismiss();
+alert.getText();
+alert.sendkeys(String stringToSend);
+
+20)	How to handle hidden elements in Selenium WebDriver?
+(JavascriptExecutor(driver)).executeScript("document.getElementsByClassName(Elementloc).click();");
+
+
+21)	How you can take a screenshots in selenium? TakeScreenshot is class or interface?
+Selenium provides an out-of-the-box capability called TakeScreenShot interface. This interface provides a method known as getScreenshotAs which helps to capture the screenshot and store it in the desired location.
+File scrFile = ((TakeScreenshot)driver).getScreenshotAs(outputType.FILE);
+FileUtils.copyFile(srcFile, new File(“location/error.png”));
+
+22)	What is a hub in Selenium Grid?
+A hub is a server or a central point that controls the test executions on different machines.
+23)	What is a node in Selenium Grid?
+Node is the machine which is attached to the hub. There can be multiple nodes in Selenium Grid
+24)	How to take screenshot with AShot 1.5.4 jar ?
+// screen will be scrolled and captured
+Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
+
+// To save the screenshot in desired location
+ImageIO.write(screenshot.getImage(), "PNG",
+       new File(System.getProperty("user.dir") + "\\screenshots\\fullpagescrn.png"));
+
+25)	What Are The Different Network Protocols That Selenium Supports? Also, How Will You Handle Them In Selenium?
+two most commonly used network protocols is HTTP and HTTPS.
+public void login(String username, String password){
+    WebDriver driver = new ChromeDriver();
+    String URL = "http://" + username + ":" + password + "@" + "website link";
+    driver.get(URL);    
+}
+Using selenium’s profile:
+FirefoxProfile FF = new FirefoxProfile();
+FF.setPreference("network.http.phishy-userpass-length", 255);
+driver = new FirefoxDriver(FF);
+driver.get("http://user:pass@www.targetsite.com/");
+Handle SSL in chrome with DesiredCapabilities instance:
+DesiredCapabilities set_ssl = DesiredCapabilities.chrome();
+set_ssl.setCapability (CapabilityType.ACCEPT_SSL_CERTS, true);
+WebDriver driver = new ChromeDriver (set_ssl);
+26)	How to find broken link?
+https://www.softwaretestingmaterial.com/broken-links-using-selenium/
+WebDriver commands and reads the status of each href link with the help of HttpURLConnection class.
+List<WebElement> links = driver.findElements(By.tagName(“a”));
+For(int i=0; i<links.size(); i++){
+WebElement ele = links.get(i);
+String url = ele.getAttribute(“href”);
+verifyLink(url);  
+public static void verifyLink(String urlLink){
+try{
+	URL link = new URL(urlLink)
+	HttpURLConnection httpConn = (HttpURLConnection)link.openConnection();
+httpConn.setConnectioTimeout(2000);
+httpConn.connect();
+if(httpConn.getResponseCode() == 200){ syso(urlLink + httpConn.getResponseMessage());}
+else if(httpConn.getResponseCode() == 404){ syso(urlLink + httpConn.getResponseMessage());}
+catch(Exception e){}
+}}
+Expert in Xpath:
+https://freecrm.com/
+<span>free</span>
+1)	//span[text()='free']
+2)	//span[contains(text(),'free')] –recomemded
+<button type="button" data-dismiss="modal" class="close">×</button>
+3)	//button[@type='button' and @class='close']
+https://v4-alpha.getbootstrap.com/components/dropdowns/
+4)	 //button         1 of 37
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown button </button>
+ //button[@class='btn btn-secondary dropdown-toggle']     1 of 5
+ 
+5)   
+//a[text()=’text2 test2’] 
+Final xpath: with parent::, preceding-sibling::
+ 
+ 
+ 
