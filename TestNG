@@ -130,6 +130,9 @@ Assert.assertFalse(condition, message)
 Soft Assert – Soft Assert collects errors during @Test. Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement.
 Note:  If you forget to call assertAll() at the end of your test, the test will pass even if any assert objects threw exceptions as shown in the above example. So don’t forget to add assertAll()
  
+  10) Run testng.xml file from command line
+   C:\TestNG_WORKSPACE>java -cp "C:\TestNG_WORKSPACE" org.testng.TestNG testng.xml
+   
    
   
    
