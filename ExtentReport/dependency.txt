@@ -1,0 +1,7 @@
+ folow url> https://www.seleniumeasy.com/selenium-tutorials/extent-reports-using-testng-listeners
+ 
+ <dependency>
+	<groupId>com.aventstack</groupId>
+	<artifactId>extentreports</artifactId>
+	<version>3.1.5</version>
+ </dependency>
