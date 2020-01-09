@@ -1,0 +1,58 @@
+1) goto project folder and enter
+$ git init
+Note: .git hidden file will be created.
+
+2) push an existing repository from the command line
+$git remote add origin gitURL.git
+note: now it registared with git repository
+
+3) $git status
+it will show all files which is not in repository added yet.
+
+4) $git add .  
+it will add all files, complete project.
+
+5)$ git commit -m "commit comments"
+
+
+
+6) push the code now after commit.
+$git push origin master
+note: here master is the brunch name,
+note: remember before push the code you need to add the permission with ssh key, other wise it will
+show permission denied msg.
+
+How to create SSH Key ?
+1) goto account>settings> select "SSH and GPG keys">New SSH Key
+2) enter title for SSH key name,
+3) enter SSH Key
+	a) how to get the SSH Key?
+	url: https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+4) click add ssh key
+5) repeat the above push command and it will not showing permission denied error.
+
+
+======================
+how to clone or copy repository from Github in local folder
+1) create a folder and go to that folder by command prompt
+2)use git clone command from current folder
+$ git clone gitURL  ohhh oi
+
+
+how to open clone project in eclipse?
+file>import>general>existing projects>select root project directory>open>
+makesure select your project under project>finish.
+
+if gitrepository update any code of file then we need to use PULL request to get latest code from GITHUB.
+7) $git pull origin master.
+note: it will be copy latest code in current project form master brunch.
+======================
+
+How to work with Git and GitHub in Eclipse?
+1)commit
+2)push
+3)pull
+4)Branching
+5)Raising pull request(PR)
+6)Approve pull request(PR)
+7)Merging
