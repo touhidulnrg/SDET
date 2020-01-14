@@ -1,3 +1,4 @@
 exam at home/office: https://aws.amazon.com/blogs/apn/now-you-can-take-the-aws-certified-cloud-practitioner-exam-at-your-home-or-office-24-7/
 flash card> https://www.studyblue.com/notes/note/n/aws-cloud-practitioner/deck/20727148
 study guide> https://www.studyblue.com/notes/note/n/aws-cloud-practitioner-study-guide-2018-19-online/deck/21761111
+aws training> https://www.aws.training/Details/eLearning?id=29804
