@@ -14,7 +14,9 @@ it will add all files, complete project.
 
 5)$ git commit -m "commit comments"
 
-
+### before commit first time you need to execute name and email for git.
+$ git config --global user.name "russel"
+$ git config --global user.email "russel2005@gmail.com"
 
 6) push the code now after commit.
 $git push origin master
