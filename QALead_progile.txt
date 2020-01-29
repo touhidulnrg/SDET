@@ -1,0 +1,195 @@
+Experience
+ 
+QA Test Lead
+Company Name
+Ascensus
+ 
+Contract
+Dates EmployedOct 2019 – Present
+Employment Duration4 mos
+LocationDresher, PA
+
+Projects: Compliance Testing
+
+Compliance Testing is an annual IRS requirement for all qualified retirement plans and serves as a checkpoint to ensure compliance with Internal Revenue Code and ERISA provisions. Ascensus focusing more of Safe Harbor Plan (401k), ACP, ADP, 415, 410b, 402g plan Test.
+
+
+Testing Methods: Functional, Integration, Regression and API Automation.
+
+Responsibilities:
+• As a QA Test lead managing onsite/offshore team members in US and India.
+• Build and implement test procedure, testing strategy, test plan and testing tools selection throughout the company.
+• Developed Test Plans, define test Scenarios and write Test Cases according to user requirements, stories, System and business rules.
+• Performed Black Box, Functional, Integration, System, Smoke, End-to-End, Regression, Backend, Browser Compatibility and Security testing.
+• Perform automated and manual GUI, Functionality and Integration testing on the web and native applications.
+• Working in Agile environment to support SDLC including requirement, design, build, test, implement, and coordinate other team members in development process.
+• Performed REST service testing using RestClient.
+• Automating Service testing using httpClient/RestAssured for GET/POST/PUT/DELETE service.
+• Involved planning, preparing, creating, debugging and running automated test scripts in Selenium WebDriver using Java.
+• Developed Data driven, Keyword driven and Hybrid test framework with Page Object Model approach using Selenium WebDriver.
+• Implement Specflow frameworks to develop Selenium test suite.
+• Implementing XUnit, Specflow frameworks to develop test suite.
+• Using TestNG for Cross-browser testing with Chrome, FF, IE, Safari browser compatibility.
+• Implementing automated test results, maintains and manages reports in separate que.
+• Using Jenkin/Hudson for continuous integration and development.
+• Using Azure DevOps /Confluence for Test Documents and any issue’s/defects submission.
+
+
+
+QA Specialist
+Company Name
+Premier Inc.
+ 
+Contract
+Dates EmployedApr 2019 – Oct 2019
+Employment Duration7 mos
+LocationCharlotte, North Carolina Area
+
+• As a QA Test lead managing onsite team members across the board in US.
+• Build and implement test procedure, testing strategy, test plan and testing tools selection throughout the company.
+• Developed Test Plans, define test Scenarios and write Test Cases according to user requirements, stories, System and business rules.
+• Performed Black Box, Functional, Integration, System, Smoke, End-to-End, Regression, Backend, Browser Compatibility and Security testing.
+• Perform automated and manual GUI, Functionality and Integration testing on the web and native applications.
+• Working in Agile environment to support SDLC including requirement, design, build, test, implement, and coordinate other team members in development process.
+• Performed SOAP and REST service testing.
+• Automating Service testing using httpClient/RestAssured for GET/POST/PUT/DELETE service.
+• Involved planning, preparing, creating, debugging and running automated test scripts in Selenium WebDriver using Java.
+• Developed Data driven, Keyword driven and Hybrid test framework with Page Object Model approach using Selenium WebDriver.
+• Developed BDD frameworks using Cucumber Gherkin language with Selenium test suite.
+• Implementing TestNG, Apache POI, BDD with Cucumber frameworks to develop test suite.
+• Using TestNG for Cross-browser testing with Chrome, FF, IE, Safari browser compatibility.
+• Implementing automated test results, maintains and manages reports in separate que.
+• Using Jenkin/Hudson for continuous integration and development.
+• Using JIRA/Confluence for Test Documents and any issue’s/defects submission.
+• Supporting, Monitoring, troubleshooting, documenting results for cover potential risks and advising team of mitigation options.
+• Identified, tracked, resolved all defects and ensured resolution prior to implementation of software.
+
+
+QA Test Lead
+Company Name
+TIAA
+ 
+Contract
+Dates EmployedOct 2018 – Mar 2019
+Employment Duration6 mos
+
+Projects: Retirement Redesign (Retirement plan, Fund, Activity), Custom Portfolio.
+Testing Methods: Functional, Integration, Regression, Automation.
+
+Responsibilities:
+• As a QA Test lead managing onsite and offshore team members in US and
+India.
+• Build and implement test procedure, testing strategy, test plan and testing
+tools selection throughout the company.
+• Developed Test Plans, define test Scenarios and write Test Cases according to
+user requirements, stories, System and business rules.
+• Performed Black Box, Functional, Integration, System, Smoke, End-to-End,
+Regression, Backend, Browser Compatibility and Security testing.
+• Demonstrate Test Plan and Outline to team members as well as UAT supports.
+• Performed Black Box, Functional, Integration, System, Smoke, End-to-End,
+Regression, Back-end, Browser Compatibility and Security testing.
+• Perform Functional, Integration, End to End Manual GUI and Automated
+testing on the web and native devices.
+• Using SOAPUI for SOAP and REST service.
+• Automating Service testing using httpClient/RestAssured for
+GET/POST/PUT/DELETE service.
+• Developed Data driven, Keyword driven and Hybrid test framework with Page
+Object Model approach using Selenium WebDriver.
+• Developed BDD frameworks using Cucumber Gherkin language with Selenium
+test suite.
+• Implementing TestNG, JUnit, Apache POI, BDD with Cucumber frameworks to
+develop test suite.
+• Implementing automated test results, maintains and manages reports.
+• Using DevOps (Jenkin/Hudson) for continuous integration and development.
+• Using JIRA/Confluence for Test Documents and any issue’s/defects
+submission.
+• Supporting, Monitoring, troubleshooting, documenting test results to cover
+risks and advising team of mitigation options.
+• Identified, tracked, resolved all defects and ensured resolution prior to
+implementation of software.
+
+
+QA Team Lead
+Company Name
+SapientRazorfish
+Dates EmployedApr 2018 – Jul 2018
+Employment Duration4 mos
+LocationBoca Raton, Miami
+
+As a QA Test lead managing onsite and offshore team members across other cities in US. Build and implement test procedure, testing strategy, test plan and testing tools selection throughout the company.
+
+Analyze the application, reviewed System requirement documents, Functional Requirement document and formulated the Test plan based on the system/functional requirements. Analyzing business documents and functional documents, writing test plan and test cases based on the documents. Handover Testing report and release supports for every environment to production. Work closely with Dev team and UAT team members to give instance input from test perspective.
+
+Projects: Advertizing application, Vacation Package, Hotel/Resort Reservation, e-Commerce.
+Testing Methods: Functional, Integration, Regression, Automation.
+
+Responsibilities:
+• Worked in Agile environment to support SDLC including requirement, design, build, test, implement, and coordinate other team members in development process.
+• Developed Test Plans, define test Scenarios and write Test Cases according to user requirements, stories, System and business rules.
+• Performed Black Box, Functional, Integration, System, Smoke, End-to-End, Regression, Backend, Browser Compatibility and Security testing.
+• Perform automated and manual GUI, Functionality and Integration testing on the web and native applications.
+• Using SOAPUI for SOAP and REST service.
+• Automating Service testing using httpClient/RestAssured for GET/POST/PUT/DELETE service.
+• Involved planning, preparing, creating, debugging and running automated test scripts in Selenium WebDriver using Java.
+• Developed Data driven, Keyword driven and Hybrid test framework with Page Object Model approach using Selenium WebDriver.
+• Targeting to implement TestNG, Apache POI, BDD with Cucumber frameworks to develop test suite.
+• Targeting to implement TestNG for Cross-browser testing with Chrome, FF, IE, Safari browser compatibility.
+
+
+QA Team Lead
+Company Name
+SapientRazorfish
+Dates EmployedApr 2018 – Jul 2018
+Employment Duration4 mos
+LocationBoca Raton, Miami
+
+As a QA Test lead managing onsite and offshore team members across other cities in US. Build and implement test procedure, testing strategy, test plan and testing tools selection throughout the company.
+
+Analyze the application, reviewed System requirement documents, Functional Requirement document and formulated the Test plan based on the system/functional requirements. Analyzing business documents and functional documents, writing test plan and test cases based on the documents. Handover Testing report and release supports for every environment to production. Work closely with Dev team and UAT team members to give instance input from test perspective.
+
+Projects: Advertizing application, Vacation Package, Hotel/Resort Reservation, e-Commerce.
+Testing Methods: Functional, Integration, Regression, Automation.
+
+Responsibilities:
+• Worked in Agile environment to support SDLC including requirement, design, build, test, implement, and coordinate other team members in development process.
+• Developed Test Plans, define test Scenarios and write Test Cases according to user requirements, stories, System and business rules.
+• Performed Black Box, Functional, Integration, System, Smoke, End-to-End, Regression, Backend, Browser Compatibility and Security testing.
+• Perform automated and manual GUI, Functionality and Integration testing on the web and native applications.
+• Using SOAPUI for SOAP and REST service.
+• Automating Service testing using httpClient/RestAssured for GET/POST/PUT/DELETE service.
+• Involved planning, preparing, creating, debugging and running automated test scripts in Selenium WebDriver using Java.
+• Developed Data driven, Keyword driven and Hybrid test framework with Page Object Model approach using Selenium WebDriver.
+• Targeting to implement TestNG, Apache POI, BDD with Cucumber frameworks to develop test suite.
+• Targeting to implement TestNG for Cross-browser testing with Chrome, FF, IE, Safari browser compatibility.
+
+
+Sr. Software Test Engineer
+Company Name
+Viacom
+Dates EmployedSep 2016 – Jan 2018
+Employment Duration1 yr 5 mos
+LocationGreater New York City Area
+
+Responsibilities:
+
+• Performed Black Box testing, Functional testing, Integration/system testing, Smoke, System, End-to-End, Regression, Backend, Browser Compatibility and Security testing.
+• Perform automated and manual GUI, Functionality and Integration testing on the web and native applications.
+• Configure Charles Proxy to check all web interaction.
+• Through Charles view SSL requests and responses in plain text.
+• Validate XML file and other parameter from Charles report.
+• Debugging and reviewing all recorded data that is sent and received through Charles.
+• Hands on experience on Selenium WebDriver Automation testing tools for functional, regression, smoke and integration testing.
+• Developed automated test framework in Selenium and deploy source code to GIT.
+• Writing all Selenium test scripts using core Java.
+• Developed Data driven, Keyword driven and Hybrid framework with Page Object Model approach.
+• Using TestNG, Apache POI, BDD framework to develop test suite.
+• Execute all test scripts in various environments.
+• Cross-browser testing was involved for browser compatibility.
+• Develop the script, execute, analyze and create reports.
+• Using DevOps (Jenkin/Hudson) for continuous integration and development.
+• Using JIRA/Confuence for Test Documents and any issue’s/defects submission.
+• Enterprise Tester also using for Test Case Management.
+• Using Java and Appium for automating the mobile, and tablet test cases.
+• Work extensively with Android, and IOS Emulator for testing the mobile, and tablet devices, and run the process of automation.
+
+
