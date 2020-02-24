@@ -18,6 +18,13 @@ it will add all files, complete project.
 $ git config --global user.name "russel"
 $ git config --global user.email "russel2005@gmail.com"
 
+### origin is the repository name
+$ git remote -v
+output:
+origin https://github.com/russel2005/SDET.git (fetch)
+origin https://github.com/russel2005/SDET.git (puch)
+
+
 6) push the code now after commit.
 $git push origin master  or $ git puch -u origin master 
 note: here master is the brunch name,
