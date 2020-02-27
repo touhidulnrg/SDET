@@ -14,11 +14,13 @@ Advanced Selenium Questions:
 // throwing an “ElementNotVisibleException”
 
 2)	What is ImplicitWait vs ExplicitWait ?
-ImplicitWait: WebDriver to wait for a certain amount of time before it throws timeout exception. Applied to all the elements in the script. Wait for pulling the DOM.
+ImplicitWait: WebDriver to wait for a certain amount of time before it throws timeout exception. Applied to all the elements in the script. 
+Wait for pulling the DOM.
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 ExplicitWait: WebDriverWait is applied on a certain element with defined expected condition and time.
-Explicit wait will overwrite the implicit wait where ever explicit wait is applied. So, Explicit Wait gets first preference then Implicit Wait.
+Explicit wait will overwrite the implicit wait where ever explicit wait is applied. So, Explicit Wait gets first preference then 
+Implicit Wait.
 WebDriverWait wait = new WebDriverWait(driver, 20);
 WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(“”)));
 Ecpected cConditions can be used in:
@@ -139,7 +141,8 @@ alert.sendkeys(String stringToSend);
 
 
 21)	How you can take a screenshots in selenium? TakeScreenshot is class or interface?
-Selenium provides an out-of-the-box capability called TakeScreenShot interface. This interface provides a method known as getScreenshotAs which helps to capture the screenshot and store it in the desired location.
+Selenium provides an out-of-the-box capability called TakeScreenShot interface. This interface provides a method known 
+as getScreenshotAs which helps to capture the screenshot and store it in the desired location.
 File scrFile = ((TakeScreenshot)driver).getScreenshotAs(outputType.FILE);
 FileUtils.copyFile(srcFile, new File(“location/error.png”));
 
