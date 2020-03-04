@@ -72,3 +72,15 @@ Once this completes, the pull request is automatically marked as complete.
 
 When completing the merge, there is an option to close the branch as well. 
 Use this option if you feel that the branch created is no longer necessary.
+
+Step 6: Merge and Rebase
+=========================
+$ git merge --squash feature
+$ git commit -m "feature and master merged"
+$ git rebase master
+
+$ git checkout feature
+$ git add .
+$ git commit -m "msg"
+$ git master
+$ git rebase feature
