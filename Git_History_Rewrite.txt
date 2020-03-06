@@ -1,0 +1,175 @@
+Rewriting Git History:
+link> https://www.youtube.com/watch?v=ElRzTuYln0M
+1.Amending commits
+2.Rewording commit messages
+3.Deleting commits
+4.Reordering commits
+5.Squashing commits
+6.Splitting commits
+
+
+
+1.Amending commits
+------------------
+> git log --oneline
+> git status            red two files which didnot added
+> git add about_me.css profile_pic.jpg
+> git status	        add two files which id green
+
+> git commit --amend --no-edit
+if you compare with first status to last status then 
+you can see that git commit hash code got changed.
+######################
+
+2.Rewording commit messages
+> git log --oneline
+bb994b1 (HEAD -> master) Refactored navbar
+58c4060 Frontpag but fiz
+953e22b Init files
+a8f32ba added Readme.md
+
+> git rebase -i HEAD~2
+it will open commit file and find below:
+1 pick 58c4060 Frontpag bug fiz
+2 pick bb994b1 Refactored navbar
+3
+4 # Rebase 953e22b..bb994b1 onto 953e22b (2 commands)
+.....
+....
+then modify file with first line pick>reword
+1 reword 58c4060 Frontpag bug fiz
+2 pick bb994b1 Refactored navbar
+3
+4 # Rebase 953e22b..bb994b1 onto 953e22b (2 commands)
+.....
+....
+press Esc + : + W + Q
+
+note: now it allow to edit git commit msg >Frontpag bug fiz
+edit it and save it with below command
+press Esc + : + W + Q
+note: now you see successfully changed the msg.
+> git log --oneline
+########################
+
+3.Deleting commits
+------------------
+>git log --oneline
+f6ece47 (HEAD -> my_branch) Accessibility fix
+a8c2a0b updated README
+03ab7dd Refactored screenreader
+2073216 (master) other stuff
+9e3b58c7 initial commit
+
+here, we want to delete a8c2a0b updated README
+> git rebase -i HEAD~3
+1 pick 03ab7dd Refactored screenreader
+2 pick a8c2a0b updated README
+3 pick f6ece47 Accessibility fix
+4 
+5 # Rebase 2073216..f6ece47 onto 2073216 (3 commands)
+
+for modify file:
+Enter: i 
+change pick to drop on updated README
+
+1 pick 03ab7dd Refactored screenreader
+2 drop a8c2a0b updated README
+3 pick f6ece47 Accessibility fix
+4 
+5 # Rebase 2073216..f6ece47 onto 2073216 (3 commands)
+press Esc + : + W + Q
+
+>git log --oneline
+6ddeccd (HEAD -> my_branch) Accessibility fix
+03ab7dd Refactored screenreader
+2073216 (master) other stuff
+9e3b58c7 initial commit
+#######################
+
+4.Reordering commits
+---------------------
+>git log --oneline
+80aa505 (HEAD -> my_branch) Accessibility fix
+5573a33 updated README
+12d233e Refactored screenreader
+0536d6b (master) other stuff
+bb68a2f initial commit
+
+>git rebase -i HEAD~2
+Enter: i
+reorder the pick 
+enter Esc + : + W + Q
+
+> git log --oneline
+e4111d5 (HEAD -> my_branch) updated README
+83f7354 Accessibility fix
+12d233e Refactored screenreader
+0536d6b (master) other stuff
+bb68a2f initial commit
+
+5.Squashing commits
+---------------------
+403d6e7 (HEAD -> my_branch) Renamed some API vars
+1a777f0 Added comments to API
+0a16a39 Added API endpoint
+86c5037 (master) added Readme.md
+94806dd Initial commit
+
+Note: last three commit are same changes and wanted to merge
+
+>git rebase -i HEAD~3
+1 pick 0a16a39 Added API endpoint
+2 pick 1a777f0 Added comments to API
+3 pick 403d6e7 Renamed some API vars
+4 
+5 # Rebase 86c5037..403d6e7 onto 86c5037(3 commands)
+
+Enter: i
+change last two with fixup
+1 pick 0a16a39 Added API endpoint
+2 fixup 1a777f0 Added comments to API
+3 fixup 403d6e7 Renamed some API vars
+4 
+5 # Rebase 86c5037..403d6e7 onto 86c5037(3 commands)
+enter Esc + : + W + Q
+
+> git log --oneline
+f66535f (HEAD -> my_branch) Added API endpoint
+86c5037 (master) added Readme.md
+94806dd Initial commit
+
+note: last 3 commit squash to last commit. hash code got changed and rewrite the history.
+
+6.Splitting commits
+-------------------
+> git log --oneline
+> git rebase -i HEAD~3
+1 pick 0a16a39 Added API endpoint
+2 pick 1a777f0 added navbar and fixed bug
+3 pick 403d6e7 Renamed some API vars
+4 
+5 # Rebase 86c5037..403d6e7 onto 86c5037(3 commands)
+
+change 2nd commit > pick = edit
+1 pick 0a16a39 Added API endpoint
+2 edit 1a777f0 added navbar and fixed bug
+3 pick 403d6e7 Renamed some API vars
+4 
+5 # Rebase 86c5037..403d6e7 onto 86c5037(3 commands)
+enter Esc + : + W + Q
+
+>git status
+> git reseyt HEAD^
+it will unstage all file
+
+> git add navbar.html navbar.css
+> git commit -m 'added navbar'
+
+> git add analytcs.js
+> git commit -m 'bug fix'
+> git rebase --continue
+
+>git log --oneline
+
+done.
