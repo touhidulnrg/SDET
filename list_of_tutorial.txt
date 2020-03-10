@@ -6,7 +6,7 @@ fixing bad commit: https://www.youtube.com/watch?v=FdZecVxzJbk
 
 nice automation site: https://ultimateqa.com/
 
-
+saucelabs: https://saucelabs.com/resources/webinars/is-cucumber-automation-killing-your-project?mkt_tok=eyJpIjoiT1RRNFpUVTNZekJsTmpjMyIsInQiOiI0cDAwb0VFaEUzb2VPMU53SVhiYzV5NGx3Zk1BeEEweTBDUENcL21DTmRyWm53eFFyeWV1Ukxwa2tjV3BqVHJaZ2twbjRiVWpTWFJ3THdFOEtyM0V2d0QzTHkyRXpvXC9LOWU3cnF3MVBQQnRmUFVNSm9pa2VyRGVcL3M1MlpPTk83aiJ9
 Kiss
 keep
 it
