@@ -2,3 +2,6 @@ free hosting in google: https://www.youtube.com/watch?v=vIJdypOqlL4
 hiding api key : https://www.youtube.com/watch?v=17UVejOw3zA
 sending email in python: https://www.youtube.com/watch?v=JRCJ6RtE3xU
 fixing bad commit: https://www.youtube.com/watch?v=FdZecVxzJbk
+
+
+nice automation site: https://ultimateqa.com/
