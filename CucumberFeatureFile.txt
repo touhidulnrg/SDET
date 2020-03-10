@@ -1,0 +1,6 @@
+feature: Login page
+   login page should work
+  scenario: Login page should open
+  Given a user opens a browser
+  When a user goes to the login page
+  Then the user sees the login page loaded.
