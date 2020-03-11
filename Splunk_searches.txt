@@ -1,0 +1,46 @@
+plunk Searches
+Hung Threads by Host in Last 24 Hours
+index=retail
+source="/opt/vgi/was/v85/01/profiles/retprd01/AS_retprd01/logs/awdprd01_1/Syst
+emOut.log" hung | rex field=_raw "There is\/are (?<hung_threads>.*) thread" |
+timechart max(hung_threads) by host
+Hung threads in PVLVA489
+index=retail sourcetype=was_systemout "hung" host=pvlva489 NOT
+ImpactedUserName NOT SystemOut "Thread" | head 1 | stats
+max(hung_thread_count) as hung_threads | eval
+hung_threads=if(isNull(hung_threads),0,hung_threads)
+Hung threads in PVLVA490
+index=retail sourcetype=was_systemout "hung" host=pvlva490 NOT
+ImpactedUserName NOT SystemOut "Thread" | head 1 | stats
+max(hung_thread_count) as hung_threads | eval
+hung_threads=if(isNull(hung_threads),0,hung_threads)
+Hung threads in PVLVA491
+index=retail sourcetype=was_systemout "hung" host=pvlva491 NOT
+ImpactedUserName NOT SystemOut "Thread" | head 1 | stats
+max(hung_thread_count) as hung_threads | eval
+hung_threads=if(isNull(hung_threads),0,hung_threads)
+Hung threads in PVLVA492
+index=retail sourcetype=was_systemout "hung" host=pvlva492 NOT
+ImpactedUserName NOT SystemOut "Thread" | head 1 | stats
+max(hung_thread_count) as hung_threads | eval
+hung_threads=if(isNull(hung_threads),0,hung_threads)
+Error Count by Host (Application Servers)
+index=retail sourcetype=was_systemout
+source="/opt/vgi/was/v85/01/profiles/retprd01/AS_retprd01/logs/awdprd01_1/Syst
+emOut.log"SEVERE | timechart count by host
+Error count in AWM, Last 24 hours
+index=retail host=pvlva634 sourcetype=HVLM
+source="/var/Logs/ret/prd/awm/01/hvlm/LM.12173.AWM.log" type=error| timechart
+count by host
+Error count in AWD-Batch
+index=retail host=pvlva634 sourcetype=HVLM source ="/var/Logs/ret/prd/batchawdstatus/
+01/hvlm/LM.12175.BATCH-AWDSTATUS.log" type=error| timechart count by
+host
+Average Response Time
+index=retail sourcetype=was_systemout
+source="/opt/vgi/was/v85/01/profiles/retprd01/AS_retprd01/logs/awdprd01_1/Syst
+emOut.log" SystemOut| timechart span=10s avg(res_time) by host
+index=vgi_omnibus sourcetype=tec_probe_stream AlertGroup=PasswordVaultCLIWIN |
+dedup hostname | table hostname
+pvlva225-/opt/ret/prd/vws/v5/*/awd/*/logs)-
+pvlva226-(/opt/ret/prd/vws/v5/*/awd/*/logs)
