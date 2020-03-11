@@ -1,3 +1,4 @@
+Devpertment: Retail
 Costbasis, Tax, PM = Scheifele,Carol A, carol_a_scheifele@vanguard.com
 AWD=Automated Work Distributor,
 userid: uutj, ex:10859, 60 morehall rd, 268c, malvern pa 19355.
