@@ -1,5 +1,9 @@
-Project Delivery manager: Bard,Jeffrey
-PM: Loganathan,Nithyaprakash
+Costbasis, Tax, PM = Scheifele,Carol A, carol_a_scheifele@vanguard.com
+AWD=Automated Work Distributor,
+userid: uutj, ex:10859, 60 morehall rd, 268c, malvern pa 19355.
+Project Delivery manager: Bard,Jeffrey(jeffrey_bard@vanguard.com)
+PM: Loganathan,Nithyaprakash(nithyaprakash_loganathan@vanguard.com), Chung,Sonny (sonny_chung@vanguard.com)
+Gandham,Sanjay(sanjay_gandham@vanguard.com)
 lead: Alberici,Albert V
 tester: Pulekar,Rati
 admin: Bunch,Jason M
