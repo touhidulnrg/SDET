@@ -1,0 +1,9 @@
+Photography:
+============
+A> F# smaller = More light (better portrait)
+   F# big     = less light (better group)
+
+S> Faster = Darker,
+   Slow   = Brigher
+
+ISO> Increase = Brighter, better to stay low.
