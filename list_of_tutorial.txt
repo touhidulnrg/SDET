@@ -13,3 +13,11 @@ keep
 it
 simple
 stupid
+
+
+QA Essentials:
+RAID: Redundant Array of Independent Disks)
+Link: https://www.youtube.com/watch?v=U-OCdTeZLac
+
+DEVOPS: Developers + Operations
+Link: https://www.youtube.com/watch?v=_I94-tJlovg
