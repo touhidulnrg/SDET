@@ -24,7 +24,7 @@ output:
 origin https://github.com/russel2005/SDET.git (fetch)
 origin https://github.com/russel2005/SDET.git (puch)
 
-
+git
 6) push the code now after commit.
 $git push origin master  or $ git push -u origin master 
 note: here master is the brunch name,
@@ -45,8 +45,7 @@ How to create SSH Key ?
 how to clone or copy repository from Github in local folder
 1) create a folder and go to that folder by command prompt
 2)use git clone command from current folder
-$ git clone gitURL  ohhh oi
-
+$ git clone gitURL
 
 how to open clone project in eclipse?
 file>import>general>existing projects>select root project directory>open>
@@ -54,7 +53,7 @@ makesure select your project under project>finish.
 
 if gitrepository update any code of file then we need to use PULL request to get latest code from GITHUB.
 7) $git pull origin master.
-note: it will be copy latest code in current project form master brunch.
+note: it will be copy latest code in current project from master brunch.
 ======================
 
 How to work with Git and GitHub in Eclipse?
