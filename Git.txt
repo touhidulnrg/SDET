@@ -26,7 +26,7 @@ origin https://github.com/russel2005/SDET.git (puch)
 
 
 6) push the code now after commit.
-$git push origin master  or $ git puch -u origin master 
+$git push origin master  or $ git push -u origin master 
 note: here master is the brunch name,
 note: remember before push the code you need to add the permission with ssh key, other wise it will
 show permission denied msg.
