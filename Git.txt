@@ -1,3 +1,39 @@
+$git init
+$git add filename
+$git status
+$git commit
+$git push
+$git pull
+$git clone
+
+
+Scenario: create branch but want to delete the branch.
+#to list all branches
+> git branch -a
+> git branch -r   #this for remote branch only
+> git branch -l   # this for local branch only
+> git branch --list 'my*'  #my-branch will show
+
+Scenario: update your local branch and check the difference with the remote branch.
+#go to the branch you want to check difference
+> git checkout branch_name
+#update your local
+> git fetch --all
+# to check which branch you are in
+> git branch  or > git status
+
+#two different branch
+> git diff my-local-branch remotes/origin/master
+
+#different local master vs remote master branch 
+> git diff master origin/master or > git diff featureA origin/next
+
+# different just the file name in the branches
+> git diff --name-status remote-branch local-branch
+
+
+
+
 1) goto project folder and enter
 $ git init
 Note: .git hidden file will be created.
@@ -54,6 +90,15 @@ makesure select your project under project>finish.
 if gitrepository update any code of file then we need to use PULL request to get latest code from GITHUB.
 7) $git pull origin master.
 note: it will be copy latest code in current project from master brunch.
+======================
+Update your local git repo:
+>git fetch
+
+Build a local branch and checkout on it:
+>git branch pouet && git checkout pouet
+
+Apply the commit you want on this 
+>git cherry-pick abcdefabcdef
 ======================
 
 How to work with Git and GitHub in Eclipse?
