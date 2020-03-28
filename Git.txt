@@ -7,30 +7,50 @@ $git pull
 $git clone
 
 
-Scenario: create branch but want to delete the branch.
+Scenario1: create branch but want to delete the branch.
+=========
+> git branch new-branch  #create
+> git branch branch-name -D  #Delete
 #to list all branches
 > git branch -a
 > git branch -r   #this for remote branch only
 > git branch -l   # this for local branch only
 > git branch --list 'my*'  #my-branch will show
 
-Scenario: update your local branch and check the difference with the remote branch.
+Scenario2: update your local branch and check the difference with the remote branch.
+==========
 #go to the branch you want to check difference
 > git checkout branch_name
-#update your local
+> git fetch --all    #update your local
+> git branch  or > git status    # to check which branch you are in
+> git diff my-local-branch remotes/origin/master    #two different branch
+> git diff master origin/master or > git diff featureA origin/next   #different local master vs remote master branch 
+> git diff --name-status remote-branch local-branch   # different just the file name in the branches
+
+Scenario3: delete and re-create branch
+=========
+> git branch branch-name -D
+> git reset commit --hard or git reset --hard HEAD
+> git branch new-branch
+> git pull
+or:
+Delete all the files. Leave just the .git directory.
+> git reset --hard HEAD
+> git pull
+> git push
+
+Scenario4: force “git pull” to overwrite local files?
+=========
+> git fetch --all  or > git fetch origin master
+> git reset --hard origin/master
+# maintain current local commits by creating a branch form master before resetting.
+> git checkout master
+> git branch new-branch-to-save-current-commits
 > git fetch --all
-# to check which branch you are in
-> git branch  or > git status
+> git reset --hard origin/master
 
-#two different branch
-> git diff my-local-branch remotes/origin/master
-
-#different local master vs remote master branch 
-> git diff master origin/master or > git diff featureA origin/next
-
-# different just the file name in the branches
-> git diff --name-status remote-branch local-branch
-
+Scenario05: Rewriting Git History
+==========
 
 
 
@@ -92,7 +112,7 @@ if gitrepository update any code of file then we need to use PULL request to get
 note: it will be copy latest code in current project from master brunch.
 ======================
 Update your local git repo:
->git fetch
+>git fetch --all
 
 Build a local branch and checkout on it:
 >git branch pouet && git checkout pouet
