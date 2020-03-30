@@ -7,6 +7,8 @@ link> https://www.youtube.com/watch?v=ElRzTuYln0M
 5.Squashing commits
 6.Splitting commits
 
+7. change commit msg
+
  1.Amending commits
 ------------------
 > git log --oneline
@@ -174,3 +176,17 @@ untracked files:
 >git log --oneline
 
 done.
+
+7. change commit msg:
+---------------------
+> git log
+> git commit --amend -m "new commit msg"
+note: above code change the git history
+
+if you dont want to change git history
+> git log
+> git checkout localbranch
+> git 
+
+
+
