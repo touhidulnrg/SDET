@@ -5,6 +5,8 @@ $git commit
 $git push
 $git pull
 $git clone
+$git log --all --decorate --oneline --graph
+
 
 
 Scenario1: create branch but want to delete the branch.
@@ -16,18 +18,10 @@ Scenario1: create branch but want to delete the branch.
 > git branch -r   #this for remote branch only
 > git branch -l   # this for local branch only
 > git branch --list 'my*'  #my-branch will show
+#create branch and checkout in one command
+> git branch -b newbranch
 
-Scenario2: update your local branch and check the difference with the remote branch.
-==========
-#go to the branch you want to check difference
-> git checkout branch_name
-> git fetch --all    #update your local
-> git branch  or > git status    # to check which branch you are in
-> git diff my-local-branch remotes/origin/master    #two different branch
-> git diff master origin/master or > git diff featureA origin/next   #different local master vs remote master branch 
-> git diff --name-status remote-branch local-branch   # different just the file name in the branches
-
-Scenario3: delete and re-create branch
+Scenario2: delete and re-create branch
 =========
 > git branch branch-name -D
 > git reset commit --hard or git reset --hard HEAD
@@ -39,7 +33,49 @@ Delete all the files. Leave just the .git directory.
 > git pull
 > git push
 
-Scenario4: force “git pull” to overwrite local files?
+
+Scenario3: update your local branch and check the difference with the remote branch.
+==========
+#go to the branch you want to check difference
+> git checkout branch_name
+> git fetch --all    #update your local
+> git branch  or > git status    # to check which branch you are in
+> git diff my-local-branch remotes/origin/master    #two different branch
+> git diff master origin/master or > git diff featureA origin/next   #different local master vs remote master branch 
+> git diff --name-status remote-branch local-branch   # different just the file name in the branches
+
+Scenario4: create a localbranch and commit then merge into local-master branch
+==========
+> git branch localbranch  # create branch
+> git checkout localbranch
+> git add file.py
+> git commit -m "msg"
+> git checkout master
+> git pull     # update master with latest code form remote master branch
+> git merge localbranch  # it says that lacalbranch merge into master branch, because merge ran from master-branch
+
+Scenario5-a: Merge fast-forward then delete branch
+==========
+create and checkout SDN, add file and commit #here SDN is local branch
+create and checkout Auth, add file and commit #here Auth is local branch
+> git checkout master
+> git diff master..SDN  # check the diff from local SDN branch to local master branch.
+> git merge SDN # now HEAD point to master and SDN
+> git branch --merged  # it shows that master branch merge to SDN branch
+> git branch -d SDN
+
+Scenario5-b: Merge 3-Way  when branch HEAD is previous master branch commit. and master updated and merge with other branch.
+==========
+> git status
+> git merge auth
+> git branch --merged
+> git branch -d auth
+
+Scenario5-c: Merge conflicts
+============
+
+
+Scenario6: force “git pull” to overwrite local files?
 =========
 > git fetch --all  or > git fetch origin master
 > git reset --hard origin/master
@@ -49,7 +85,7 @@ Scenario4: force “git pull” to overwrite local files?
 > git fetch --all
 > git reset --hard origin/master
 
-Scenario05: Undoing Bad commits
+Scenario07: Undoing Bad commits
 ==========
 > git log
  commit hascode1
@@ -59,6 +95,10 @@ Scenario05: Undoing Bad commits
 > git reset --soft Hashcode3
 > git
 
+
+Scenario06: create git alias command
+> alias graph="git log --all --decorate --oneline --graph"
+> graph
 
 1) goto project folder and enter
 $ git init
