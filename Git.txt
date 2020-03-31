@@ -19,7 +19,10 @@ Scenario1: create branch but want to delete the branch.
 > git branch -l   # this for local branch only
 > git branch --list 'my*'  #my-branch will show
 #create branch and checkout in one command
-> git branch -b newbranch
+> git branch -b newbranchname
+or
+> git checkout -b newbranchname == git branch newbranchname; git checkout newbranchname
+
 
 Scenario2: delete and re-create branch
 =========
@@ -73,6 +76,7 @@ Scenario5-b: Merge 3-Way  when branch HEAD is previous master branch commit. and
 
 Scenario5-c: Merge conflicts
 ============
+
 
 
 Scenario6: force “git pull” to overwrite local files?
