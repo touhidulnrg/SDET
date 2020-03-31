@@ -49,9 +49,15 @@ Scenario4: force “git pull” to overwrite local files?
 > git fetch --all
 > git reset --hard origin/master
 
-Scenario05: Rewriting Git History
+Scenario05: Undoing Bad commits
 ==========
-
+> git log
+ commit hascode1
+ commit hascode2
+ commit hascode3 #if you want to delete recent two commit
+ 
+> git reset --soft Hashcode3
+> git
 
 
 1) goto project folder and enter
