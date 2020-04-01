@@ -1,0 +1,36 @@
+Atom necessary package list
+===========================
+file>settings>system>checked> 
+  1)show infile context menu
+  2) show in folder context menu
+  
+file>settings>install>package:
+1) for Terminal: platformio-ide-terminal
+2) goto class/method declaration: goto-definition
+3) icon:  file-icons
+4) useful when you have long file: minimap
+5) for html find color:color-picker
+6) definately useful for large project: todo
+/* TODO: add more*/ > add this line in the script file
+7) for indentation :atom-beautify
+packages>atom beautify>beautify
+8) ask help in stack overflow :ask-stack
+ctrl+alt+a> open popup and write the question
+
+9) user interface and commandline git :git-plus
+git command > use platformio terminal ex: git status
+git interface> use atom buttom status bar on right side
+
+10) git history will show :git-blame
+it shows which line modified by who
+packages>Git Blame> Toggle Git Blame
+
+11) for html and css: emmet
+go emmet.io find usefull command or shortcut
+
+12) : advanced-open-file
+
+
+
+
+
