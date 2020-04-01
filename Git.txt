@@ -97,10 +97,76 @@ Scenario07: Undoing Bad commits
  commit hascode3 #if you want to delete recent two commit
  
 > git reset --soft Hashcode3
-> git
+> git log --oneline
+
+Scenario08: Combining Git commits with squash 
+===========
+# master>localbranch: commit1, commit2, commit3 wanted to combine 3 commits to big single commit.
+> git checkout localbranch
+> git rebase -i HEAD~3
+-------------------
+pick 45uwoier84 commit1
+pick fsdf8y9y9f commit2
+pick dkfjs9dfuo commit3
+
+# Rebase 0920u234..dkfjs9dfuo onto 0920u234 ( 3 commands)
+........
+........
+-------------------
+press: i for insert/edit
+change last two commit to pick>squash
+-------------------
+pick 45uwoier84 commit1
+squash fsdf8y9y9f commit2
+squash dkfjs9dfuo commit3
+
+# Rebase 0920u234..dkfjs9dfuo onto 0920u234 ( 3 commands)
+........
+........
+-------------------
+Press: Esc+:+ wq
+Press i
+it will open the another file and put # or comments out the last commit msg
+Press: Esc+:+ wq
+> git log --oneline  # now you will see all three commits combined in single commit.
+
+Scenario09: Git workflow with Rebase
+==========
+> git branch -b QA
+> git add index.html
+> git commit -m "commit1"
+> git checkout master
+> git pull  # update master from latest code/ or last commit
+> git checkout QA
+> git rebase master
+> git checkout master
+> git rebase QA
+> git push
 
 
-Scenario06: create git alias command
+Scenario10: Git workflow with Merge
+===========
+> git status # its checkout QA branch
+> git checkout master #switch to master
+> git diff master..QA
+> git merge QA   # it should run from master branch and after run showing HEAD -> master, QA
+Note: now QA branch point to master branch, so we don't need  two branch pointing to same commit. we can delete QA branch
+
+deleting QA branch: before running the delete branch command check which branch merged
+> git branch --merged
+QA
+* master
+> git push
+> git branch -d QA  # if you have another branch then it will throw an error
+> git branch -D QA
+> git pull
+
+
+
+
+
+
+Scenario011: create git alias command
 > alias graph="git log --all --decorate --oneline --graph"
 > graph
 
@@ -119,6 +185,7 @@ it will show all files which is not in repository added yet.
 it will add all files, complete project.
 
 5)$ git commit -m "commit comments"
+5)$ git commit -a -m "commit msg"  # it equal to two command> git add file; git commit -m "commit msg"
 
 ### before commit first time you need to execute name and email for git.
 $ git config --global user.name "russel"
