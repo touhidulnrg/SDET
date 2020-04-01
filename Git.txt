@@ -158,12 +158,39 @@ QA
 * master
 > git push
 > git branch -d QA  # if you have another branch then it will throw an error
-> git branch -D QA
+> git branch -D QA  # this will delete unmerged branch
 > git pull
 
 
+Scenario11: Git STASH 
+===========
+> git checkout master
+#modify anyfile 
+> git status # on master branch, changes not staged for commit: showing red on file name
+> git checkout stage  # ERROR showing: please commit your changes or stash them before you switch branches.
+> git stash # saved working directory
+> git status # on master branch> nothing to commit, working tree clean
+> git stash list #showing stash@{0}: WIP on master, if we have multiple times "$git stash" it will show multiple
+> git stash list -p # showing each line modified of that edited file
+> git stash apply # changes not staged for commit:
+> git diff
+> git commit -a -m "commit"
+> git stash list # it still showing we have stash list, we can use as needed.
+> git stash save "better commit msg or combine one or multiple stash msg"
+> git stash list # will show multiple stash
 
 
+
+
+
+Scenairo11: Detached HEAD
+===========
+> git checkout er234rw324 >previous_commit_hascode
+> graph  # alias graph="git log --all --decorate --oneline --graph"
+> git branch stage
+> graph  # showing > HEAD, stage> HEAD is pointing to stage branch
+> git checkout stage # switch to stage branch
+> graph  # HEAD -> stage
 
 
 Scenario011: create git alias command
