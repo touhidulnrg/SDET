@@ -40,6 +40,18 @@ to the file that has issues. In this case, it is a file named origin_settings.py
 
 Step 4: Resolve the merge conflict
 ===================================
+> git status
+on branch master
+> git merge dev
+CONFLICT: Merge conflict in filename
+# fix conflicts use:
+> git merge --abort
+> git status # it shows> nothing to commit, working tree clean
+
+#now lets proceed MERGE	again
+> git merge dev # CONFLICT: Merge conflict in filename
+> git status # it showing conflict filename
+# change the file and save it
 To resolve the conflict, open the file and look for lines like this:
 -----------------------------------------
 	data = open('cert2.txt').read()
@@ -56,6 +68,11 @@ So in my case, I fixed it this way:
 	cert = TLSCertificate()	
 	print cert.loadCertificate(data)
 ----------------------------------------
+> git add filename
+> git status # showing> All conflicts fixed but you are still merging.
+> git commit # open commit edit msg> edit and saved
+> git branch -d dev
+
 
 Step 5: Check in changes
 =========================
