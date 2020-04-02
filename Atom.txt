@@ -8,14 +8,12 @@ file>settings>install>package:
 1) for Terminal: platformio-ide-terminal
 2) goto class/method declaration: goto-definition
 3) icon:  file-icons
-4) useful when you have long file: minimap
-5) for html find color:color-picker
+4) useful when you have long file: minimap, minimap-cursorline, minimap-lens
+5) :autocomplete-python
 6) definately useful for large project: todo
-/* TODO: add more*/ > add this line in the script file
+/* TODO: add more*/ > add this line in the script file, Crtl-k, crtl-t
 7) for indentation :atom-beautify
 packages>atom beautify>beautify
-8) ask help in stack overflow :ask-stack
-ctrl+alt+a> open popup and write the question
 
 9) user interface and commandline git :git-plus
 git command > use platformio terminal ex: git status
@@ -26,11 +24,33 @@ it shows which line modified by who
 packages>Git Blame> Toggle Git Blame
 
 11) for html and css: emmet
-go emmet.io find usefull command or shortcut
+go emmet.io find usefull command or shortcut for web developer
 
 12) : advanced-open-file
+ctrl+atl+o to open, hit tab to autocomplete te path
+8) ask help in stack overflow :ask-stack
+ctrl+alt+a> open popup and write the question
+
+=====================================================
+Debugging with atom:
+====================
+
+import pdb; pdb.set_trace()
+
+above line enter as breakpoint where you want in the script.
+then run
+
+next command
+====
+
+(Pdb)>next  # it will execute the next line, end enter until end. 
+
+step command
+====
+step into next line
+and use print() 
 
 
-
-
-
+continue command
+========
+when you enter it will go to end;
