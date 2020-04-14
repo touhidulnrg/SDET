@@ -193,10 +193,13 @@ Scenairo11: Detached HEAD
 > graph  # HEAD -> stage
 
 
-Scenario011: create git alias command
+Scenario012: create git alias command
 > alias graph="git log --all --decorate --oneline --graph"
 > graph
 
+
+Scenario13: git restore with origin master, changes will be destroyed
+> git reset filenm
 1) goto project folder and enter
 $ git init
 Note: .git hidden file will be created.
