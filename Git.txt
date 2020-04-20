@@ -74,9 +74,20 @@ Scenario5-b: Merge 3-Way  when branch HEAD is previous master branch commit. and
 > git branch --merged
 > git branch -d auth
 
-Scenario5-c: Merge conflicts
+***Scenario5-c: Merge with --squash
 ============
+when your master branch get updated and your local brach has multiple commit. so --squash will do merge all feature branch commit to 
+a single commit(put together) then with the latest commit in master branch.
+> git chechout master
+> git merge --squash feature
+> git commit -m "feature and master merged"
 
+***Scenarios5-d: REBASE
+=============
+
+> git checkout feature
+> git rebase master  # here update master from latest commit and feature branch moved and pointing to last master commit.
+> git rebase feature
 
 
 Scenario6: force “git pull” to overwrite local files?
