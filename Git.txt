@@ -9,11 +9,15 @@ $git log --all --decorate --oneline --graph
 
 =========beginning============================
 > git init
-> git add myfile.py
-> git statu
-> git commit -m "add myfile"
 > git remote add origin git_url.git
-> git push -u origin master
+> git pull origin master
+> git status
+> git branch frameworkdesign
+> git checkout frameworkdesign
+> git add .
+> git commit -m "add myfile"
+> git status
+> git push origin master
 
 
 Scenario1: create branch but want to delete the branch.
