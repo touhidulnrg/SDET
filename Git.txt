@@ -19,6 +19,9 @@ $git log --all --decorate --oneline --graph
 > git status
 > git push origin master
 
+===========RESET master=============
+> git reset --hard origin/master
+> git pull origin master
 
 Scenario1: create branch but want to delete the branch.
 =========
