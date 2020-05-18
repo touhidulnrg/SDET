@@ -23,6 +23,20 @@ $git log --all --decorate --oneline --graph
 > git reset --hard origin/master
 > git pull origin master
 
+===========PULL=====================
+> git remote
+> git remote -v
+> alias graph='git log --ass --decorate --oneline --graph'
+> graph
+
+> git fetch origin   #this will update from github branch to local master branch
+> git status  #now it will show how many commit is behind the local master branch from githum master branch
+> graph
+> git merge origin/master    #it will fast-forward, and local and github both HEAD are pointing the same.
+> graph
+
+> git pull  # it will combine, git fetch and git merge together
+
 Scenario1: create branch but want to delete the branch.
 =========
 > git branch new-branch  #create
