@@ -26,7 +26,7 @@ $git log --all --decorate --oneline --graph
 ===========PULL=====================
 > git remote
 > git remote -v
-> alias graph='git log --ass --decorate --oneline --graph'
+> alias graph='git log --all --decorate --oneline --graph'
 > graph
 
 > git fetch origin   #this will update from github branch to local master branch
