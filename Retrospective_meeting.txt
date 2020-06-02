@@ -1,0 +1,15 @@
+
+==========Retrospective meeting===========
+What went well?
+team objective & demo went well.
+
+Shout Out.
+Raisul for the demo
+
+What did not go well?
+only one story got finished
+UI spent tooo much time on non-essential testing functionality
+
+what can be improved?
+estimate need to be improved
+need to estimate better and breakdown tasks that can lead to better commitments.
