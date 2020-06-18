@@ -323,3 +323,10 @@ How to work with Git and GitHub in Eclipse?
 5)Raising pull request(PR)
 6)Approve pull request(PR)
 7)Merging
+
+
+============remove folder and file===============
+The rm -r command will recursively remove your folder:
+> git rm -r folder-name
+or
+> git rm filename.java
