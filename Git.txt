@@ -7,6 +7,14 @@ $git pull
 $git clone
 $git log --all --decorate --oneline --graph
 
+=========upload project to git================
+> git init
+> git remote add origin giturl.git
+> git pull origin master
+> git add .
+> git commit -m "add"
+> git push -u origin master
+
 =========beginning============================
 > git init
 > git remote add origin git_url.git
