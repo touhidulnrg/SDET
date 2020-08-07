@@ -1,0 +1,9 @@
+Change the Branch:
+1) Right click on the project
+2) Git commit> cancel > yes
+3) stach changes
+4) fetch
+5) switch/checkout > select the branch
+6) pull
+
+note: pull == fetch + merge
