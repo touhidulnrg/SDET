@@ -1,0 +1,24 @@
+Test case Design Techniques:
+----------------------------
+a) Error Guessing
+b) Boundary Value Analysis
+c) Decision Table Techniques
+d) State Transaction Techniques
+e) Equvalence Partioning
+
+Brief discussions:
+-------------------
+a) Error Guessing > analytical thinking of individual test engineers. all people are not thinking about the same way. 
+  Example: you are testing numeric digit field.
+  1) positive thinking test data: 12345679
+  2) negative thinking test data: (is the main area to find the defects you need to focus on)
+    test data might be:
+                    - fraction number > 100.50
+                    - alphanumeric > abc123
+                    - special chars >  !@#$
+                    - uppercase or lower case chars > ABC or abc
+                    - Blank or empty
+                    - space char( before or after number)
+   ultimately tester will drive the more scenarios to find of guess the error. this is all about the Error Guessing.
+   
+   
