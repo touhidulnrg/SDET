@@ -4,7 +4,7 @@ a) Error Guessing
 b) Boundary Value Analysis
 c) Decision Table Techniques
 d) State Transaction Techniques
-e) Equvalence Partioning
+e) Equivalence Partioning
 
 Brief discussions:
 -------------------
@@ -21,4 +21,43 @@ a) Error Guessing > analytical thinking of individual test engineers. all people
                     - space char( before or after number)
    ultimately tester will drive the more scenarios to find of guess the error. this is all about the Error Guessing.
    
+b) Boundary Value Analysis > find the upper and lower value for specific text field.
+  Ecample: username should be 6 characters to 16 characters
+   so minimum characters scenarios should be > 5 , 6 , 7 characters
+   so maximum characters scenarios should be > 15 , 16 , 17 characters
    
+ 
+c) Decision Table Techniques > it is based on rules criteria on specific function.
+ Example:  you work in a food company and they offer to the customer below:
+      1) New Cust > 20% off
+      2) Repeat Cust > 10% off
+      3) Coupon Code > 30%  ....so on.
+      so here number of conditions 3.
+      
+      No of TestCases will be 2 power No of Rules = 2 of power 3 = 2x2x2 = 8
+      
+      ----------------------------------------------------------------------------------------
+      | Condition  | Rule1   | Rule2  |  Rule3 | Rule4  | Rule5  | Rule6   | Rule7  | Rule8  |
+      ----------------------------------------------------------------------------------------
+      |N C 20% off |  T      |  T     |  T     |  T     | F      |  F      |  F     |  F     |
+      ----------------------------------------------------------------------------------------
+      |R C 10% off | T       |  T     |  F     |  F     | T      |  T      |  F     |  F     |
+      ----------------------------------------------------------------------------------------
+      |  C C 30%   | T       |  F     |  T     |  F     | T      | F       |  T     |  F     |
+      ----------------------------------------------------------------------------------------
+      |Result      | x       | x      |  50%   |  20%   |  40%   |  10%    |  x     |   x    |
+      ----------------------------------------------------------------------------------------
+      
+  d) State Transaction Techniques> all different machines you have or should be support machines. so all different phases you need to test it. 
+  it also called blackbox testing technique.
+   Example: you have a bank apps, and it has limited enter login password wrong 3 times then account will be locked.
+   Scenario1: 1st attempt correct > login
+   Scenario2: 1st attempt wrong & 2nd attempt correct > login
+   Scenario3: 1st & 2nd attempt wrong & 3rd attemp correct > login
+   Scenario4: 1st, 2nd & 3rd attempt wrong > blocked, can't login
+   Scenario5: 1st, 2nd wrong & 3rd attempt correct > login
+   
+  
+    
+    
+      
