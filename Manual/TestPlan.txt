@@ -1,0 +1,33 @@
+https://www.youtube.com/watch?v=NiDe8lj-wGs
+1. What is Test Plan?
+Ans: Its is the document which consist of all future testing related activities.
+
+2. Who will be create or write Test Plan?
+Ans: Lead / Manager / Sr Tester of the team.
+
+3. What is the test plan attributes?
+Objective, 
+Scope >> what feature will be test and what not
+Testing Methodology >> what kind/type of testing we perform in test environment. in web-base application first we test smoke > component > integration > System > Aut > permormance.
+Approach >> what kind of scenario we gonna test it.
+Assumption >> Tester will get proper resource or training or KT from Team member about tesing.
+Risk >> any assumption breaking
+Backup / Mitigation >> suppose company has one team 3 tester and 1 tester left the company middle of the sprint, so then how test will be perform. so other two will take the load.
+Roles & Resposibility >> 
+Scheduling >>
+Defect track >>
+Test Environment >> Test bed also will be written here, example: for payment: which credit card type will be use. 
+Entry and Exit criteria >> this is set of condition to be meet before start testing and when test will be done. Each SDLC phase has Entry and Exit criteria.
+                          Example: we need to perform 1)Component test, 2) Integration test, 3) System test.
+                          Entry: before start testing:
+                                  - test scenario should be written
+                                  - test scenario should be approved
+                                  - test data should be ready
+                                  - smoke testing should be done
+                          Exit: standard with company not the rules
+                                   - 80% test case should be pass
+                                   - not more than 2 major severity/high risk defects 
+                           
+Test Automation >> which feature not will be automation, which reature will be automated.
+Deliverable >> treaceabity matricx, 
+release note >> which version, feature list
