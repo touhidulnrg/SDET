@@ -47,7 +47,10 @@ $ git rm --cached <file>
 
 ===========PULL=====================
 > git remote
-> git remote -v # -v means verbose, it returns git url. if it not return the git url that means you don't have local repo connected to github.
+> git remote -v # -v means verbose, it returns git url. 
+if it not return the git url that means you don't have local repo connected to github. the you need to run below:
+> git remote add origin gitUrl.git
+>
 > alias graph='git log --all --decorate --oneline --graph'
 > graph
 
@@ -57,7 +60,8 @@ $ git rm --cached <file>
 > git merge origin/master    #it will fast-forward, and local and github both HEAD are pointing the same.
 > graph
 
-> git pull  # it will combine, git fetch and git merge together
+> git pull origin master # it will combine, git fetch and git merge together
+note: if your master got update then you can update your local repo with above command.
 
 Scenario1: create branch but want to delete the branch.
 =========
