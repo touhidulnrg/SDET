@@ -47,7 +47,7 @@ $ git rm --cached <file>
 
 ===========PULL=====================
 > git remote
-> git remote -v # -v means verbose, it returns git url.
+> git remote -v # -v means verbose, it returns git url. if it not return the git url that means you don't have local repo connected to github.
 > alias graph='git log --all --decorate --oneline --graph'
 > graph
 
