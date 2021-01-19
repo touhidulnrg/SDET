@@ -7,6 +7,13 @@ $git pull
 $git clone
 $git log --all --decorate --oneline --graph
 
+### before commit first time you need to execute name and email for git.
+$ git config --global user.name "russel"
+$ git config --global user.email "russel2005@gmail.com"
+after doing this, you may fix the identity used for this commit with:
+$ git commit --amend --reset-author
+$ git config --list #this will show you all current config list
+
 =========upload project to git================
 > git init
 > git remote add origin giturl.git
@@ -90,7 +97,7 @@ Scenario4: create a localbranch and commit then merge into local-master branch
 > git add file.py
 > git commit -m "msg"
 > git checkout master
-> git pull     # update master with latest code form remote master branch
+> git pull     # update master with latest code from remote master branch
 > git merge localbranch  # it says that lacalbranch merge into master branch, because merge ran from master-branch
 
 Scenario5-a: Merge fast-forward then delete branch
@@ -228,9 +235,13 @@ Scenario11: Git STASH
 
 
 
+Scenario012: create git alias command
+=============
+> alias graph="git log --all --decorate --oneline --graph"
+> graph
 
 
-Scenairo11: Detached HEAD
+Scenairo13: Detached HEAD
 ===========
 > git checkout er234rw324 >previous_commit_hascode
 > graph  # alias graph="git log --all --decorate --oneline --graph"
@@ -240,12 +251,8 @@ Scenairo11: Detached HEAD
 > graph  # HEAD -> stage
 
 
-Scenario012: create git alias command
-> alias graph="git log --all --decorate --oneline --graph"
-> graph
-
-
 Scenario13: git restore with origin master, changes will be destroyed
+===========
 > git reset filenm
 1) goto project folder and enter
 $ git init
@@ -264,9 +271,7 @@ it will add all files, complete project.
 5)$ git commit -m "commit comments"
 5)$ git commit -a -m "commit msg"  # it equal to two command> git add file; git commit -m "commit msg"
 
-### before commit first time you need to execute name and email for git.
-$ git config --global user.name "russel"
-$ git config --global user.email "russel2005@gmail.com"
+
 
 ### origin is the repository name
 $ git remote -v
@@ -330,3 +335,4 @@ The rm -r command will recursively remove your folder:
 > git rm -r folder-name
 or
 > git rm filename.java
+
