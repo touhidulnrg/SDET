@@ -15,7 +15,7 @@ $ git commit --amend --reset-author
 $ git config --list #this will show you all current config list
 
 =========upload project to git================
-> git init
+> git init # create empty git repo
 > git remote add origin giturl.git
 > git pull origin master
 > git add .
@@ -33,6 +33,13 @@ $ git config --list #this will show you all current config list
 > git commit -m "add myfile"
 > git status
 > git push origin master
+
+
+===========Stage==============
+$ git add filename # it move file into stage area.
+$ git status # it will show all stage area file and unstage area file
+===========Unstage============
+$ git rm --cached <file>  
 
 ===========RESET master=============
 > git reset --hard origin/master
