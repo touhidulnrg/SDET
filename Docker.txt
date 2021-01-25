@@ -1,4 +1,12 @@
 Docker:
+Uninstall docker:
+1) $ sudo apt-get purge docker-ce docker-ce-cli containerd.io
+2) $ sudo rm -rf /var/lib/docker
+
+Install docker:
+1) $ curl -fsSL https://get.docker.com -o get-docker.sh
+2) $ sudo sh get-docker.sh
+
 
 Host machine: OS + Hardware
 
