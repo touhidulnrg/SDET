@@ -1,0 +1,53 @@
+Docker:
+
+Host machine: OS + Hardware
+
+DockerFile: a docker file is the blueprint of the docker image. which contains code to build your docker image and ultimaltely run your app as container.
+
+Image: a docker image is a template/package* of running container.
+
+Container: is running process
+
+docker commands:
+
+> docker ps # giving the list of all running docker image
+
+install docker extension for your IDE.
+
+dockerfile:
+==========
+FROM node:12
+WORKDIR /app
+COPY package*.json ./
+RUN npm install   #shell form
+COPY . . 
+ENV PORT=8088
+EXPOSE 8080
+CMD [ "npm", "start" ]  #exec form
+==========
+
+docker image:
+=============
+>docker build -t fireship/demoapp:1.0 .
+
+docker container:
+=================
+> docker run h0sdif0s98df0sd  # process id
+> docker run -p 5000:8080 h0sdif0s98df0sd # -p is port forwarding, 8080 use 5000 for local use. because 8080 port for global.
+
+
+
+### what is volume?
+volume: is just a dedicated folder on the host machine. it can share with others container which create files that can be remounted into multiple containers.
+
+### how to create volume?
+> docker volume create shared-stuff
+> docker run \ 
+> --mount source=shared-stuff,target=/stuff
+
+### docker compose
+> it's just a tool that can run multiple container at the same time. we can create docker-compose.yaml file in the root of our project
+
+command:
+> docker-compose up
+> docker-compose down
