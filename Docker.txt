@@ -7,6 +7,9 @@ Install docker:
 1) $ curl -fsSL https://get.docker.com -o get-docker.sh
 2) $ sudo sh get-docker.sh
 
+Docker Version check:
+$ sudo docker version
+
 
 Host machine: OS + Hardware
 
