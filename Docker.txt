@@ -145,3 +145,21 @@ Docker container use cpus and memory limited:
 > docker run --cpus=.5 ubuntu  (50% of cpu will use each container maximum)
 > docker run --memory=100m ubuntu (max 100mb will use each container)
 
+
+
+Docker on Windows OS:
+=====================
+1) Docker on Windows using Docker Toolbox: windows 7 os> install virtualBox> install linux os on vm>install docker
+
+2) Docker Desktop for Windows: Windows 10 os > Microsoft Hyper-V > linux > Docker 
+
+Docker Container Orchestration:
+==============================
+> docker service create --replicas=100 nodejs
+solutions: 
+Docker Swarm: docker
+kubernetes: google, most popular
+MESOS: apache
+
+
+
