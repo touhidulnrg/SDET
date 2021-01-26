@@ -134,3 +134,14 @@ worker:
 ### run docker-compose.yml file
 > docker-compose up
 
+
+Docker Engine:
+==============
+Docker CLI
+REST API
+Docker Deamon
+
+Docker container use cpus and memory limited:
+> docker run --cpus=.5 ubuntu  (50% of cpu will use each container maximum)
+> docker run --memory=100m ubuntu (max 100mb will use each container)
+
