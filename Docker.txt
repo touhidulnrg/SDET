@@ -40,11 +40,13 @@ CMD [ "npm", "start" ]  #exec form
 docker image:
 =============
 >docker build -t fireship/demoapp:1.0 .
+> docker rmi ubuntu # ubuntu image deleted
 
 docker container:
 =================
 > docker run h0sdif0s98df0sd  # process id
 > docker run -p 5000:8080 h0sdif0s98df0sd # -p is port forwarding, 8080 use 5000 for local use. because 8080 port for global.
+> docker rm hashcode
 
 
 
