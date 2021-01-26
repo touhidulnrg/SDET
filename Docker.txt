@@ -22,6 +22,9 @@ Container: is running process
 docker commands:
 
 > docker ps # giving the list of all running docker image
+> docker ps -a # running and other images list
+> docker ps -aq # only hashcode
+> docker ps -l #list
 
 install docker extension for your IDE.
 
@@ -44,9 +47,10 @@ docker image:
 
 docker container:
 =================
+> docker run --name webapp nginx:1.14-alpine # run a container with nginx:1.4-alpine image and name it webapp
 > docker run h0sdif0s98df0sd  # process id
 > docker run -p 5000:8080 h0sdif0s98df0sd # -p is port forwarding, 8080 use 5000 for local use. because 8080 port for global.
-> docker rm hashcode
+> docker rm hashcode # remove container
 
 
 
