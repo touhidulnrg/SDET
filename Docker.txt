@@ -50,8 +50,8 @@ docker container:
 > docker run --name webapp nginx:1.14-alpine # run a container with nginx:1.4-alpine image and name it webapp
 > docker run h0sdif0s98df0sd  # process id
 > docker run -p 5000:8080 h0sdif0s98df0sd # -p is port forwarding, 8080 use 5000 for local use. because 8080 port for global.
-> docker rm hashcode # remove container
-
+> docker stop mysql
+> docker rm mysql # remove container
 
 
 ### what is volume?
@@ -68,3 +68,32 @@ volume: is just a dedicated folder on the host machine. it can share with others
 command:
 > docker-compose up
 > docker-compose down
+
+### when you remove the container it will delete all data as well. so if you want to keep the data then run the below command
+> docker run -v /opt/datadir:/var/lib/mysql mysql
+
+### Inspect Container
+> docker inspect mysql
+
+### container Logs
+> docker logs mysql
+
+
+### How to create your own image?
+dockerfile:
+===========
+FROM Ubuntu
+
+RUN apt-get update
+RUN apt-get install python
+
+RUN pip install flask
+RUN pip install flask-mysql
+
+COPY . /opt/source-code
+
+ENTRYPOINT FLASH_APP=/opt/source-code/app.py flask run
+==============
+
+
+
