@@ -1,0 +1,2 @@
+# auto run powwershell script with Schedule task.
+link: https://blog.netwrix.com/2018/07/03/how-to-automate-powershell-scripts-with-task-scheduler/
