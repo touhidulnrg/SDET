@@ -1,2 +1,22 @@
 # auto run powwershell script with Schedule task.
 link: https://blog.netwrix.com/2018/07/03/how-to-automate-powershell-scripts-with-task-scheduler/
+
+# How to create and run powershell script.
+1) Create the script in a plain text editor such as Notepad and save with a .PS1 file extension (for example, myscript.ps1).
+   In the file wrote below sample line ans save:
+   Write-Host "Welcome to TheWindowsClub.com! Your first script executed successfully"
+
+2) Run the script by entering the full path to the script (c:/scripts/myscript.ps1), or if it’s in the current directory, prefix it with a period followed by a backslash (.\myscript.ps1).
+
+3) If the path to the script contains a space, enclose the full path in quotation marks and prefix the entire thing with an ampersand (for example: &"C:/my scripts/myscript.ps1").
+
+Type the following command to allow scripts to run and press Enter:
+> Set-ExecutionPolicy RemoteSigned
+
+On Windows 10, PowerShell includes four execution policies, including: 
+link:
+https://www.windowscentral.com/how-create-and-run-your-first-powershell-script-file-windows-10
+1.Restricted — Stops any script from running.
+2.RemoteSigned — Allows scripts created on the device, but scripts created on another computer won't run unless they include a trusted publisher's signature.
+3.AllSigned — All the scripts will run, but only if a trusted publisher has signed them.
+4.Unrestricted — Runs any script without any restrictions.
