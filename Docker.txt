@@ -16,7 +16,7 @@ Host machine: OS + Hardware
 DockerFile: a docker file is the blueprint of the docker image. which contains code to build your docker image and ultimaltely run your app as container.
 
 Image: a docker image is a template/package* of running container. it is static form not the running form.
-Container: application with all its dependencies in runtime. it is running process.
+Container: application with all its dependencies in runtime. it is running process. container is not an application, it is running instance.
 
 Example: Car in a show room is image, car in the high way is container.
 
