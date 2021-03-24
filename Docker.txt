@@ -1,4 +1,4 @@
-Docker:
+Docker: is a software platform to create, deploy and manage virtualized application containers on a common OS.
 Uninstall docker:
 1) $ sudo apt-get purge docker-ce docker-ce-cli containerd.io
 2) $ sudo rm -rf /var/lib/docker
@@ -161,6 +161,13 @@ solutions:
 Docker Swarm: docker
 kubernetes: google, most popular
 MESOS: apache
+
+Docker on Linux:
+================
+# yum install -y docker > for centos
+# sudo ap-get docker > ubuntu
+# service docker status > checking docker status, default is stop
+# service docker start
 
 
 
